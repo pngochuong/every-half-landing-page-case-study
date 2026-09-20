@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic prototype local analytics sandbox & visual tracking dashboard for every-half-study-web-tracking.">
+  <title>every-half-study-web-tracking — Visual Analytics Sandbox</title>
+  <link rel="stylesheet" href="../assets/css/every-half-prototype.css">
+  <link rel="stylesheet" href="../assets/css/tracking-route.css">
+  <script src="../assets/js/tracking.js" defer></script>
+</head>
+<body class="tracking-route">
+  <p class="academic-notice">every-half-study-web-tracking · Bài tập học thuật – Sandbox kiểm thử sự kiện nội bộ</p>
+  
+  <main class="tracking-shell">
+    <section class="tracking-intro" aria-labelledby="tracking-title">
+      <p class="eyebrow">every-half-study-web-tracking</p>
+      <h1 id="tracking-title">Visual Tracking Sandbox &amp; Redirect Inspector</h1>
+      <p>Route độc lập này ghi nhận và minh bạch hoá các sự kiện tương tác CTA, chuỗi chuyển hướng (Redirect Chain) và trạng thái bảo toàn bộ tham số UTM theo đúng yêu cầu kiểm thử học thuật.</p>
+      
+      <!-- Metrics Overview -->
+      <div class="metrics-grid" aria-label="Tổng quan chỉ số sự kiện">
+        <div class="metric-card">
+          <div class="metric-val" id="metric-total">0</div>
+          <div class="metric-label">Tổng sự kiện</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="metric-cta">0</div>
+          <div class="metric-label">CTA Clicks</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="metric-views">0</div>
+          <div class="metric-label">Trang đã xem</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val" id="metric-campaigns">0</div>
+          <div class="metric-label">Chiến dịch UTM</div>
+        </div>
+      </div>
+
+      <!-- Redirect & UTM Chain Inspector -->
+      <div class="chain-inspector-box" aria-labelledby="chain-title">
+        <h3 id="chain-title">🔍 Kiểm Tra Chuỗi Chuyển Hướng &amp; Bảo Toàn UTM</h3>
+        <p class="chain-desc">Xem chi tiết trạng thái tham số UTM trước/sau thao tác chuyển hướng thật từ nút CTA:</p>
+        <div id="chain-inspector-content" class="chain-details">
+          <div class="chain-loading">Đang phân tích chuỗi chuyển hướng từ event log...</div>
+        </div>
+      </div>
+
+      <!-- Interactive CTA Simulator -->
+      <div class="simulator-box" aria-labelledby="sim-title">
+        <h3 id="sim-title">⚡ Giả Lập Trigger CTA Tuỳ Chỉnh</h3>
+        <p>Thử nghiệm gửi sự kiện CTA Click với các tham số UTM tuỳ chọn vào log realtime:</p>
+        <div class="sim-form-grid">
+          <div class="sim-field">
+            <label for="sim-source">UTM Source</label>
+            <input type="text" id="sim-source" value="every_half_study">
+          </div>
+          <div class="sim-field">
+            <label for="sim-medium">UTM Medium</label>
+            <input type="text" id="sim-medium" value="demo_sandbox">
+          </div>
+          <div class="sim-field">
+            <label for="sim-campaign">UTM Campaign</label>
+            <input type="text" id="sim-campaign" value="academic_test_2026">
+          </div>
+        </div>
+        <button id="btn-simulate-cta" type="button" class="btn-sim">
+          🎯 Trigger CTA Event &amp; Kiểm tra UTM
+        </button>
+      </div>
+
+      <a class="tracking-back" href="../index.html">← Quay lại trang chủ every-half-study-web</a>
+    </section>
+
+    <!-- Visual Event Panel -->
+    <aside class="event-panel" aria-live="polite" aria-labelledby="event-title">
+      <div class="event-panel-header">
+        <h2 id="event-title">Visual Event Feed</h2>
+      </div>
+      <p id="event-status">Đang tải event log...</p>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar" role="tablist" aria-label="Lọc sự kiện">
+        <button type="button" class="filter-btn is-active" data-filter="all">Tất cả</button>
+        <button type="button" class="filter-btn" data-filter="cta_click">CTA Clicks</button>
+        <button type="button" class="filter-btn" data-filter="page_view">Page Views</button>
+      </div>
+
+      <ul id="event-log"></ul>
+
+      <button class="clear-button" type="button" data-clear-events>🗑️ Xoá log sự kiện cục bộ</button>
+    </aside>
+  </main>
+
+  <div id="tracking-toast" class="tracking-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
+

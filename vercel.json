@@ -1,0 +1,11 @@
+{
+  "name": "every-half-study-web",
+  "builds": [
+    { "src": "**/*", "use": "@vercel/static" }
+  ],
+  "cleanUrls": true
+}
+
+
+
+
