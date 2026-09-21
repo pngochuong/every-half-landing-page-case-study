@@ -1,0 +1,125 @@
+{
+  "before": {
+    "ctaText": "Tìm cửa hàng gần bạn",
+    "ctaHref": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026",
+    "eventsStored": "[{\"id\":\"evt_rkecizk02\",\"name\":\"page_view\",\"timestamp\":\"2026-09-21T09:31:11.583Z\",\"url\":\"https://every-half-landing-page-case-study.vercel.app/\",\"destinationUrl\":null,\"referrer\":null,\"utm\":{\"utm_source\":null,\"utm_medium\":null,\"utm_campaign\":null,\"utm_content\":null,\"utm_term\":null}},{\"id\":\"evt_gmk59zczc\",\"name\":\"page_view\",\"timestamp\":\"2026-09-21T09:31:16.976Z\",\"url\":\"https://every-half-landing-page-case-study.vercel.app/\",\"destinationUrl\":null,\"referrer\":null,\"utm\":{\"utm_source\":null,\"utm_medium\":null,\"utm_campaign\":null,\"utm_content\":null,\"utm_term\":null}}]"
+  },
+  "clickAt": "2026-09-21T09:31:20.832Z",
+  "after": {
+    "location": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026",
+    "search": "?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026",
+    "title": "Every Half | Vietnam Specialty Coffee Roasters",
+    "referrer": "https://every-half-landing-page-case-study.vercel.app/",
+    "locationAfter3s": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026"
+  },
+  "log": [
+    {
+      "id": "evt_rkecizk02",
+      "name": "page_view",
+      "timestamp": "2026-09-21T09:31:11.583Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "destinationUrl": null,
+      "referrer": null,
+      "utm": {
+        "utm_source": null,
+        "utm_medium": null,
+        "utm_campaign": null,
+        "utm_content": null,
+        "utm_term": null
+      }
+    },
+    {
+      "id": "evt_gmk59zczc",
+      "name": "page_view",
+      "timestamp": "2026-09-21T09:31:16.976Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "destinationUrl": null,
+      "referrer": null,
+      "utm": {
+        "utm_source": null,
+        "utm_medium": null,
+        "utm_campaign": null,
+        "utm_content": null,
+        "utm_term": null
+      }
+    },
+    {
+      "id": "evt_hx0vt5z1l",
+      "name": "cta_click",
+      "timestamp": "2026-09-21T09:31:20.880Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "destinationUrl": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026",
+      "referrer": null,
+      "utm": {
+        "utm_source": "every_half_study",
+        "utm_medium": "landing_cta",
+        "utm_campaign": "academic_demo_2026",
+        "utm_content": null,
+        "utm_term": null
+      }
+    },
+    {
+      "id": "evt_9n5rcldal",
+      "name": "page_view",
+      "timestamp": "2026-09-21T09:31:30.461Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "destinationUrl": null,
+      "referrer": null,
+      "utm": {
+        "utm_source": null,
+        "utm_medium": null,
+        "utm_campaign": null,
+        "utm_content": null,
+        "utm_term": null
+      }
+    }
+  ],
+  "dashboard": "Sự kiện ghi nhận:\ncta_click\nThời gian (Timestamp):\n2026-09-21T09:31:20.880Z\nChuỗi Chuyển Hướng:\n/ chuyển đến https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026\nTrạng thái UTM:\nĐã bảo toàn đầy đủ tham số UTM\nTham số còn / mất sau redirect:\nCòn đủ source, medium, campaign\nsource: every_half_study\nmedium: landing_cta\ncampaign: academic_demo_2026",
+  "chain": [
+    {
+      "t": "2026-09-21T09:30:01.606Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "redirectedFrom": null
+    },
+    {
+      "t": "2026-09-21T09:30:02.006Z",
+      "response": 200,
+      "url": "https://every-half-landing-page-case-study.vercel.app/"
+    },
+    {
+      "t": "2026-09-21T09:30:04.549Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "redirectedFrom": null
+    },
+    {
+      "t": "2026-09-21T09:31:14.852Z",
+      "response": 200,
+      "url": "https://every-half-landing-page-case-study.vercel.app/"
+    },
+    {
+      "t": "2026-09-21T09:31:20.900Z",
+      "url": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026",
+      "redirectedFrom": null
+    },
+    {
+      "t": "2026-09-21T09:31:21.503Z",
+      "response": 200,
+      "url": "https://www.everyhalf.vn/?utm_source=every_half_study&utm_medium=landing_cta&utm_campaign=academic_demo_2026"
+    },
+    {
+      "t": "2026-09-21T09:31:30.041Z",
+      "url": "https://engage.wixapps.net/chat-widget-server/renderChatWidget/index?lang=vi&dateNumberFormat=vi-vn&isPrimaryLanguage=true&pageId=masterPage&compId=comp-ldy5lbp0&viewerCompId=comp-ldy5lbp0&siteRevision=1641&viewMode=site&deviceType=desktop&locale=vi&tz=Asia%2FSaigon&regionalLanguage=vi&width=230&height=66&instance=O57_ktOmQVYlUUVzr_c79Xiz-JK4ib1EjCotWAwfMDQ.eyJpbnN0YW5jZUlkIjoiNmQ4YjE0YWMtNDI5OS00YWNmLWFmN2YtMWI5OWMwMmRlZmEwIiwiYXBwRGVmSWQiOiIxNDUxN2UxYS0zZmYwLWFmOTgtNDA4ZS0yYmQ2OTUzYzM2YTIiLCJtZXRhU2l0ZUlkIjoiMDYwYjEwNjUtNGMyMy00OTZlLWFmMjAtZGMyNDc1NmZlYTQ1Iiwic2lnbkRhdGUiOiIyMDI2LTA5LTIxVDA5OjMxOjI0LjgwOFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjIwMzA2YTRkLTlkOWYtNGIzYy04ZjJiLWEwY2U3YjdjYjk3ZiIsImJpVG9rZW4iOiI2YjgwMDRjOS0wZWJhLTAzYTEtMDA1Zi1jN2JkYjU0MjA1ZTUiLCJzaXRlT3duZXJJZCI6ImYyNzQ0OWRjLTM0NGItNGNlNi04ZTg5LWRhODg0NmNiZWQwMyIsImJzIjoiQzdseS13UDZFV3k1dGtzRTY0QjU3R3lrWVhPcFBpdGRlenoybXcwei1pZyIsInNjZCI6IjIwMjMtMDEtMTFUMTM6NDE6MzMuOTc2WiJ9&currency=VND&currentCurrency=VND&commonConfig=%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22bsi%22%3A%227a7f46e3-ba6b-4892-8173-c0b8f3c91d4d%7C1%22%2C%22siteRevision%22%3A%221641%22%2C%22renderingFlow%22%3A%22NONE%22%2C%22language%22%3A%22vi%22%2C%22locale%22%3A%22vi-vn%22%2C%22BSI%22%3A%227a7f46e3-ba6b-4892-8173-c0b8f3c91d4d%7C1%22%7D&currentRoute=.%2F&vsi=d5de3291-19f3-4389-93a2-9fb468602a3a",
+      "redirectedFrom": null
+    },
+    {
+      "t": "2026-09-21T09:31:30.134Z",
+      "url": "https://every-half-landing-page-case-study.vercel.app/",
+      "redirectedFrom": null
+    },
+    {
+      "t": "2026-09-21T09:31:30.204Z",
+      "response": 200,
+      "url": "https://every-half-landing-page-case-study.vercel.app/"
+    }
+  ]
+}
