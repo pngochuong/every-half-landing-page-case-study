@@ -1,2 +1,7 @@
 .vercel
 node_modules
+tmp
+tests
+docs
+EVERY_HALF_REMAINING_ASSETS_PROMPT.md
+.env*
