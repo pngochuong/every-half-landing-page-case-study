@@ -122,7 +122,6 @@
       const emptyState = document.createElement('div');
       emptyState.className = 'event-log-empty';
       emptyState.innerHTML = `
-        <div class="empty-icon">📭</div>
         <p>Chưa có sự kiện nào trong bộ lọc này.</p>
         <span class="empty-sub">Hãy nhấp nút CTA bên dưới để thử nghiệm gửi sự kiện.</span>
       `;
@@ -143,13 +142,13 @@
 
       if (event.name === 'cta_click') {
         badgeClass = 'badge-cta';
-        badgeLabel = '🎯 CTA CLICK';
+        badgeLabel = 'CTA CLICK';
       } else if (event.name === 'simulated_cta_click') {
         badgeClass = 'badge-simulated';
-        badgeLabel = '⚡ SIMULATED CTA';
+        badgeLabel = 'SIMULATED CTA';
       } else if (event.name === 'page_view') {
         badgeClass = 'badge-pageview';
-        badgeLabel = '👁️ PAGE VIEW';
+        badgeLabel = 'PAGE VIEW';
       }
 
       badge.className = `event-badge ${badgeClass}`;
@@ -175,7 +174,7 @@
 
       if (event.destinationUrl) {
         const destPathName = new URL(event.destinationUrl, window.location.href).pathname;
-        pathHtml += ` <span class="url-arrow">➔</span> <code class="url-code dest">${destPathName}</code>`;
+        pathHtml += ` <span class="url-arrow">chuyển đến</span> <code class="url-code dest">${destPathName}</code>`;
       }
       pathRow.innerHTML = pathHtml;
       details.append(pathRow);
@@ -236,8 +235,8 @@
     if (!latestCta) {
       container.innerHTML = `
         <div class="chain-empty">
-          <p>⚠️ Chưa có thao tác nhấp CTA nào được ghi nhận.</p>
-          <span class="chain-sub">Hãy nhấp nút CTA trên trang <a href="../index.html" style="color:var(--tracking-orange);">every-half-study-web</a> hoặc thử nút Giả lập bên dưới.</span>
+          <p>Chưa có thao tác nhấp CTA nào được ghi nhận.</p>
+          <span class="chain-sub">Hãy bấm nút &quot;Tìm cửa hàng gần bạn&quot; ở đầu trang hoặc dùng nút giả lập bên dưới.</span>
         </div>
       `;
       return;
@@ -245,14 +244,18 @@
 
     const utmObj = latestCta.utm || {};
     const hasUtm = Object.values(utmObj).some(Boolean);
-    const srcPath = new URL(latestCta.url, window.location.href).pathname;
-    const destPath = latestCta.destinationUrl ? new URL(latestCta.destinationUrl, window.location.href).pathname : 'N/A';
+    const srcUrl = new URL(latestCta.url, window.location.href);
+    const destUrl = latestCta.destinationUrl ? new URL(latestCta.destinationUrl, window.location.href) : null;
+    const srcPath = srcUrl.pathname;
+    const destPath = destUrl ? destUrl.href : 'N/A';
+    const expectedUtm = ['utm_source', 'utm_medium', 'utm_campaign'];
+    const missingUtm = destUrl ? expectedUtm.filter((key) => !destUrl.searchParams.get(key)) : expectedUtm;
 
     container.innerHTML = `
       <div class="chain-grid">
         <div class="chain-row">
           <span class="chain-label">Sự kiện ghi nhận:</span>
-          <span class="chain-val badge-cta">🎯 ${latestCta.name}</span>
+          <span class="chain-val badge-cta">${latestCta.name}</span>
         </div>
         <div class="chain-row">
           <span class="chain-label">Thời gian (Timestamp):</span>
@@ -260,13 +263,17 @@
         </div>
         <div class="chain-row">
           <span class="chain-label">Chuỗi Chuyển Hướng:</span>
-          <span class="chain-val mono"><code class="url-code">${srcPath}</code> ➔ <code class="url-code dest">${destPath}</code></span>
+          <span class="chain-val mono"><code class="url-code">${srcPath}</code> chuyển đến <code class="url-code dest">${destPath}</code></span>
         </div>
         <div class="chain-row">
           <span class="chain-label">Trạng thái UTM:</span>
           <span class="chain-val ${hasUtm ? 'utm-status-pass' : 'utm-status-warn'}">
-            ${hasUtm ? '✅ Đã bảo toàn đầy đủ tham số UTM' : '⚠️ Trắng tham số UTM'}
+            ${hasUtm ? 'Đã bảo toàn đầy đủ tham số UTM' : 'Trắng tham số UTM'}
           </span>
+        </div>
+        <div class="chain-row">
+          <span class="chain-label">Tham số còn / mất sau redirect:</span>
+          <span class="chain-val mono">${missingUtm.length ? 'Thiếu: ' + missingUtm.join(', ') : 'Còn đủ source, medium, campaign'}</span>
         </div>
         ${hasUtm ? `
         <div class="chain-utm-box">

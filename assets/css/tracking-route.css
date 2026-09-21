@@ -164,7 +164,8 @@
 }
 
 /* Right Side Visual Event Panel */
-.tracking-route .event-panel {
+.tracking-route .event-panel,
+.internal-check .event-panel {
   background: var(--tracking-ink);
   border-radius: 12px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
@@ -180,7 +181,8 @@
   border-bottom: 1px solid var(--tracking-line);
   padding-bottom: 0.75rem;
 }
-.tracking-route .event-panel h2 {
+.tracking-route .event-panel h2,
+.internal-check .event-panel h2 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
@@ -382,7 +384,8 @@
   color: #6b635c;
 }
 
-.tracking-route .clear-button {
+.tracking-route .clear-button,
+.internal-check .clear-button {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
@@ -395,7 +398,8 @@
   transition: all 0.2s ease;
   width: 100%;
 }
-.tracking-route .clear-button:hover {
+.tracking-route .clear-button:hover,
+.internal-check .clear-button:hover {
   background: #ffffff;
   color: var(--tracking-ink);
   border-color: #ffffff;
@@ -476,6 +480,7 @@
 .chain-val.mono {
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
+.chain-val { overflow-wrap:anywhere; text-align:right; }
 .utm-status-pass {
   color: #1e7046;
   font-weight: 800;
@@ -516,3 +521,36 @@
 }
 
 
+
+/* Internal verification section on the landing page */
+.internal-check {
+  background: var(--tracking-paper);
+  border-top: 1px solid rgba(21, 18, 16, 0.12);
+  color: #201b18;
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  scroll-margin-top: 1rem;
+}
+.internal-check-head {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding: 0 clamp(1.25rem, 5vw, 6rem);
+}
+.internal-check-head h2 {
+  font-family: var(--body, sans-serif);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+.internal-check-head p {
+  color: #61564f;
+  font-size: 0.95rem;
+  margin: 0;
+}
+.internal-check .tracking-shell {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: 0;
+}
+.chain-label { flex: 0 0 auto; }
+.chain-grid .url-code { background: rgba(21, 18, 16, 0.07); color: #3a322d; overflow-wrap: anywhere; }
+.chain-grid .url-code.dest { color: #9a5a12; }

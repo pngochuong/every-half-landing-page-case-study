@@ -15,7 +15,10 @@ test('the landing page is clearly academic and has a valid UTM CTA', () => {
   assert.match(home, /Bài tập học thuật – không phải trang chính thức của thương hiệu/);
   assert.match(home, /id="visit-roastery"/);
   assert.match(home, /data-track="cta_click"/);
-  assert.match(home, /utm_source=academic_prototype&amp;utm_medium=landing_page&amp;utm_campaign=every_half_case_study/);
+  assert.match(home, /https:\/\/www\.everyhalf\.vn\/\?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=academic_demo_2026/);
+  assert.match(home, />Tìm cửa hàng gần bạn</);
+  assert.match(home, /href="#tracking-check">Xem kết quả ghi nhận sự kiện</);
+  assert.doesNotMatch(home, /[←-⇿☀-➿\u{1F000}-\u{1FFFF}]/u);
 });
 
 test('the tracking module exposes private event logging primitives', () => {
