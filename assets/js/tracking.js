@@ -324,7 +324,7 @@
         utm_campaign: campaignInput
       };
 
-      const destUrl = `thank-you.html?utm_source=${encodeURIComponent(sourceInput)}&utm_medium=${encodeURIComponent(mediumInput)}&utm_campaign=${encodeURIComponent(campaignInput)}`;
+      const destUrl = `https://www.everyhalf.vn/?utm_source=${encodeURIComponent(sourceInput)}&utm_medium=${encodeURIComponent(mediumInput)}&utm_campaign=${encodeURIComponent(campaignInput)}`;
       recordEvent('simulated_cta_click', destUrl, customUtm);
     });
   }
