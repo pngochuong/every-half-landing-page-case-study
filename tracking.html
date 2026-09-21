@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Trang nội bộ phục vụ kiểm chứng UTM, chuyển hướng và ghi nhận sự kiện cho bài tập học thuật.">
+  <title>Kết quả ghi nhận sự kiện — Every Half</title>
+  <link rel="stylesheet" href="/assets/css/every-half-prototype.css">
+  <link rel="stylesheet" href="/assets/css/tracking-route.css">
+  <script src="/assets/js/tracking.js" defer></script>
+</head>
+<body class="tracking-route">
+  <p class="academic-notice">Bài tập học thuật – không phải trang chính thức của thương hiệu</p>
+
+  <main class="tracking-shell">
+    <section class="tracking-intro" aria-labelledby="tracking-title">
+      <h1 id="tracking-title">Kết quả ghi nhận sự kiện</h1>
+      <p>Trang nội bộ phục vụ kiểm chứng UTM, chuyển hướng và ghi nhận sự kiện cho bài tập học thuật.</p>
+      <a class="tracking-back" href="/">Quay lại landing page</a>
+
+      <div class="metrics-grid" aria-label="Tổng quan chỉ số sự kiện">
+        <div class="metric-card"><div class="metric-val" id="metric-total">0</div><div class="metric-label">Tổng sự kiện</div></div>
+        <div class="metric-card"><div class="metric-val" id="metric-cta">0</div><div class="metric-label">CTA Clicks</div></div>
+        <div class="metric-card"><div class="metric-val" id="metric-views">0</div><div class="metric-label">Trang đã xem</div></div>
+        <div class="metric-card"><div class="metric-val" id="metric-campaigns">0</div><div class="metric-label">Chiến dịch UTM</div></div>
+      </div>
+
+      <div class="chain-inspector-box" aria-labelledby="chain-title">
+        <h3 id="chain-title">Chuỗi chuyển hướng và bảo toàn UTM</h3>
+        <p class="chain-desc">Trạng thái tham số UTM của lần bấm CTA gần nhất, tại thời điểm chuyển hướng.</p>
+        <div id="chain-inspector-content" class="chain-details">
+          <div class="chain-loading">Đang phân tích event log...</div>
+        </div>
+      </div>
+
+      <div class="simulator-box" aria-labelledby="sim-title">
+        <h3 id="sim-title">Giả lập sự kiện CTA tuỳ chỉnh</h3>
+        <p>Gửi sự kiện CTA với tham số UTM tuỳ chọn vào log.</p>
+        <div class="sim-form-grid">
+          <div class="sim-field"><label for="sim-source">UTM Source</label><input type="text" id="sim-source" value="every_half_study"></div>
+          <div class="sim-field"><label for="sim-medium">UTM Medium</label><input type="text" id="sim-medium" value="demo_sandbox"></div>
+          <div class="sim-field"><label for="sim-campaign">UTM Campaign</label><input type="text" id="sim-campaign" value="academic_test_2026"></div>
+        </div>
+        <button id="btn-simulate-cta" type="button" class="btn-sim">Gửi sự kiện giả lập</button>
+      </div>
+    </section>
+
+    <aside class="event-panel" aria-live="polite" aria-labelledby="event-title">
+      <div class="event-panel-header"><h2 id="event-title">Nhật ký sự kiện</h2></div>
+      <p id="event-status">Đang tải event log...</p>
+      <div class="filter-bar" role="tablist" aria-label="Lọc sự kiện">
+        <button type="button" class="filter-btn is-active" data-filter="all">Tất cả</button>
+        <button type="button" class="filter-btn" data-filter="cta_click">CTA Clicks</button>
+        <button type="button" class="filter-btn" data-filter="page_view">Page Views</button>
+      </div>
+      <ul id="event-log"></ul>
+      <button class="clear-button" type="button" data-clear-events>Xoá log sự kiện cục bộ</button>
+    </aside>
+  </main>
+
+  <div id="tracking-toast" class="tracking-toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Khám phá không gian Every Half và tìm cửa hàng phù hợp cho lần ghé tiếp theo. Bài tập học thuật, không phải trang chính thức của thương hiệu.">
-  <title>Every Half — Tìm một khoảng dừng</title><link rel="stylesheet" href="assets/css/every-half-prototype.css"><link rel="stylesheet" href="assets/css/tracking-route.css"><script src="assets/js/tracking.js" defer></script><script src="assets/js/motion.js" defer></script>
+  <title>Every Half — Tìm một khoảng dừng</title><link rel="stylesheet" href="assets/css/every-half-prototype.css"><script src="assets/js/tracking.js" defer></script><script src="assets/js/motion.js" defer></script>
 </head>
 <body>
   <p class="academic-notice">Bài tập học thuật – không phải trang chính thức của thương hiệu</p>
@@ -13,7 +13,7 @@
         <a id="visit-roastery" class="cta" data-track="cta_click" href="https://www.everyhalf.vn/store?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=academic_demo_2026">Tìm cửa hàng gần bạn</a>
         <a class="cta-secondary" href="#origin">Khám phá câu chuyện Every Half</a>
       </div>
-      <a class="utility-link" href="#tracking-check">Xem kết quả ghi nhận sự kiện</a></div></section>
+      <a class="utility-link" href="/tracking">Xem kết quả ghi nhận sự kiện</a></div></section>
     <section class="section story-grid" id="origin" aria-labelledby="origin-title" data-reveal><div class="story-copy"><p class="eyebrow">01 / Nguồn gốc</p><h2 id="origin-title">Đất đỏ, bàn tay và sự kiên nhẫn.</h2><p>Hạt cà phê bắt đầu từ những điều rất thật: đất, thời tiết và nhịp chăm sóc của con người. Câu chuyện này tôn trọng phần còn lại của tự nhiên.</p></div><img class="story-image" src="public/images/everyhalf/origin/05_origin_human.png" alt="Con người chăm sóc cây cà phê"></section>
     <section class="transition" aria-label="Chất liệu quả cà phê"><img src="public/images/everyhalf/transition/13_transition_macro.png" alt="Cận cảnh kết cấu tự nhiên của vỏ quả cà phê"></section>
     <section class="section story-grid reverse" aria-labelledby="process-title" data-reveal><img class="story-image" src="public/images/everyhalf/process/08_roast_heat.png" alt="Nhiệt và chuyển động trong quá trình rang cà phê"><div class="story-copy"><p class="eyebrow">02 / Chuyển hoá</p><h2 id="process-title">Nhiệt đánh thức những tầng hương.</h2><p>Rang không chỉ là kỹ thuật. Đó là một cách lắng nghe, để từng hạt kể lại nơi nó đã đi qua bằng vị giác riêng.</p></div></section>
@@ -29,54 +29,6 @@
       </div>
     </section>
 
-    <section class="internal-check" id="tracking-check" aria-labelledby="internal-check-title">
-      <div class="internal-check-head">
-        <h2 id="internal-check-title">Khu vực kiểm tra nội bộ</h2>
-        <p>Chỉ phục vụ kiểm chứng UTM, chuyển hướng và ghi nhận sự kiện cho bài tập học thuật.</p>
-      </div>
-      <div class="tracking-shell">
-        <div class="tracking-intro">
-          <div class="metrics-grid" aria-label="Tổng quan chỉ số sự kiện">
-            <div class="metric-card"><div class="metric-val" id="metric-total">0</div><div class="metric-label">Tổng sự kiện</div></div>
-            <div class="metric-card"><div class="metric-val" id="metric-cta">0</div><div class="metric-label">CTA Clicks</div></div>
-            <div class="metric-card"><div class="metric-val" id="metric-views">0</div><div class="metric-label">Trang đã xem</div></div>
-            <div class="metric-card"><div class="metric-val" id="metric-campaigns">0</div><div class="metric-label">Chiến dịch UTM</div></div>
-          </div>
-
-          <div class="chain-inspector-box" aria-labelledby="chain-title">
-            <h3 id="chain-title">Chuỗi chuyển hướng và bảo toàn UTM</h3>
-            <p class="chain-desc">Trạng thái tham số UTM của lần bấm CTA gần nhất, tại thời điểm chuyển hướng.</p>
-            <div id="chain-inspector-content" class="chain-details">
-              <div class="chain-loading">Đang phân tích event log...</div>
-            </div>
-          </div>
-
-          <div class="simulator-box" aria-labelledby="sim-title">
-            <h3 id="sim-title">Giả lập sự kiện CTA tuỳ chỉnh</h3>
-            <p>Gửi sự kiện CTA với tham số UTM tuỳ chọn vào log.</p>
-            <div class="sim-form-grid">
-              <div class="sim-field"><label for="sim-source">UTM Source</label><input type="text" id="sim-source" value="every_half_study"></div>
-              <div class="sim-field"><label for="sim-medium">UTM Medium</label><input type="text" id="sim-medium" value="demo_sandbox"></div>
-              <div class="sim-field"><label for="sim-campaign">UTM Campaign</label><input type="text" id="sim-campaign" value="academic_test_2026"></div>
-            </div>
-            <button id="btn-simulate-cta" type="button" class="btn-sim">Gửi sự kiện giả lập</button>
-          </div>
-        </div>
-
-        <aside class="event-panel" aria-live="polite" aria-labelledby="event-title">
-          <div class="event-panel-header"><h2 id="event-title">Nhật ký sự kiện</h2></div>
-          <p id="event-status">Đang tải event log...</p>
-          <div class="filter-bar" role="tablist" aria-label="Lọc sự kiện">
-            <button type="button" class="filter-btn is-active" data-filter="all">Tất cả</button>
-            <button type="button" class="filter-btn" data-filter="cta_click">CTA Clicks</button>
-            <button type="button" class="filter-btn" data-filter="page_view">Page Views</button>
-          </div>
-          <ul id="event-log"></ul>
-          <button class="clear-button" type="button" data-clear-events>Xoá log sự kiện cục bộ</button>
-        </aside>
-      </div>
-    </section>
-    <div id="tracking-toast" class="tracking-toast" role="status" aria-live="polite"></div>
   </main>
   <footer class="site-footer"><span>Bài tập học thuật – không phải trang chính thức của thương hiệu</span><a href="asset_gallery.html">Xem asset gallery</a></footer>
 </body>

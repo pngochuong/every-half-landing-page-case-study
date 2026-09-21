@@ -337,7 +337,8 @@
     setupFilters();
     setupSimulator();
     renderDashboard();
-    recordEvent('page_view');
+    // The dashboard page only reads the log; it does not add its own page_view events.
+    if (!document.querySelector('#event-log')) recordEvent('page_view');
   }
 
   window.EveryHalfTracking = { parseUtm, recordEvent, getEvents, clear, renderDashboard };
