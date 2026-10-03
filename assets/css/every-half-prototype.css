@@ -26,7 +26,7 @@
 .proof { border-bottom:1px solid var(--line); border-top:1px solid var(--line); margin:0 clamp(1.25rem,8vw,9rem); padding:clamp(2.5rem,6vw,4.5rem) 0; }
 .proof-grid { display:grid; gap:2rem clamp(1.5rem,4vw,4rem); grid-template-columns:repeat(3,minmax(0,1fr)); list-style:none; margin:0; padding:0; }
 .proof-grid li { display:flex; flex-direction:column; gap:.5rem; }
-.proof-grid strong { font-family:var(--display); font-size:clamp(2rem,4vw,3.6rem); font-weight:400; line-height:1.05; }
+.proof-grid strong { font-family:var(--display); font-size:clamp(1.8rem,2.8vw,2.8rem); font-weight:400; line-height:1.05; white-space:nowrap; }
 .proof-grid span { font-size:1rem; font-weight:600; line-height:1.5; }
 .proof-grid small { color:rgba(37,31,28,.72); font-size:.9rem; line-height:1.5; }
 @media (max-width:900px) { .proof-grid { grid-template-columns:1fr; } .proof-grid li { border-top:1px solid var(--line); padding-top:1.25rem; } .proof-grid li:first-child { border-top:0; padding-top:0; } }
