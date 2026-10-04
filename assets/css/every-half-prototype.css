@@ -20,22 +20,19 @@
 .utility-link:hover { color:var(--plaster); }
 @media (max-width:700px) { .hero-actions { align-items:stretch; flex-direction:column; } .hero-actions .cta,.cta-secondary,.cta-secondary-filled { justify-content:center; text-align:center; width:100%; } .site-header { padding-block:.9rem; } }
 
-/* Hero — thông điệp, proof, CTA theo thứ tự quét mắt */
-.hero-copy p.hero-subline { color:rgba(244,239,234,.92); font-size:clamp(1.05rem,1.6vw,1.3rem); line-height:1.65; margin:0; max-width:50ch; }
-.hero-proof { margin-top:1.75rem; }
+/* Điểm 1 — Thông điệp chính: subline nêu rõ danh mục sản phẩm cốt lõi */
+.hero-subline { color:var(--plaster); font-size:clamp(1.05rem,1.7vw,1.35rem); font-weight:600; letter-spacing:.01em; margin:0 0 .85rem; max-width:55ch; }
+
+/* Điểm 2 — Bằng chứng / Proof: 2 giải Gold gần CTA */
+.hero-proof { margin-top:1.4rem; }
 .hero-copy p.proof-label { color:rgba(244,239,234,.62); font-size:.72rem; font-weight:600; letter-spacing:.14em; line-height:1.4; margin:0 0 .7rem; text-transform:uppercase; }
 .proof-badges { display:grid; gap:1.5rem; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none; margin:0; max-width:34rem; padding:0; }
 .proof-badges li { border-left:1px solid rgba(230,157,69,.6); display:flex; flex-direction:column; gap:.2rem; padding-left:.9rem; }
 .proof-badges .proof-medal { color:var(--gold); font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
 .proof-badges strong { font-family:var(--display); font-size:1.12rem; font-weight:400; line-height:1.25; }
 .proof-badges li > span:last-child { color:rgba(244,239,234,.72); font-size:.8rem; line-height:1.45; }
-@media (max-width:700px) { .proof-badges { gap:1rem; grid-template-columns:1fr; } .hero-proof { margin-top:1.5rem; } .hero-copy h1 { margin-bottom:1.1rem; } .hero-actions { margin-top:1.6rem; } }
+@media (max-width:700px) { .proof-badges { gap:1rem; grid-template-columns:1fr; } }
 
-/* Hệ 3 CTA: gold đặc (chính) → viền kem (phụ) → link chữ (khám phá) */
-.hero-actions { gap:.9rem 1rem; }
-.hero-actions .cta,.hero-actions .cta-secondary { align-items:center; font-size:1rem; min-height:3.5rem; padding:0 1.8rem; }
-.hero-actions .cta-secondary { background:rgba(244,239,234,.06); border-color:rgba(244,239,234,.5); font-weight:600; }
-.cta-tertiary { color:rgba(244,239,234,.82); font-size:.95rem; font-weight:500; padding:.9rem .4rem; text-decoration:underline; text-decoration-color:rgba(230,157,69,.7); text-underline-offset:6px; transition:color .2s ease,text-decoration-color .2s ease; }
-.cta-tertiary:hover { color:var(--gold); text-decoration-color:var(--gold); }
-.cta:focus-visible,.cta-secondary:focus-visible,.cta-tertiary:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
-@media (max-width:700px) { .hero-actions { gap:.75rem; } .hero-actions .cta-tertiary { justify-content:center; padding:.6rem 0; text-align:center; width:100%; } }
+/* Điểm 3 — CTA giảm lo ngại: CTA phụ dẫn thẳng tới trang mua hàng online */
+.cta-secondary-filled { background:transparent; border:1px solid var(--gold); color:var(--gold); display:inline-flex; font-size:1.02rem; font-weight:700; margin-top:0; padding:1rem 1.75rem; text-decoration:none; transition:background .2s ease,color .2s ease; }
+.cta-secondary-filled:hover { background:var(--gold); color:var(--charcoal); }
