@@ -18,4 +18,15 @@
 .cta-secondary:hover { background:rgba(244,239,234,.12); border-color:var(--plaster); }
 .utility-link { color:rgba(244,239,234,.72); display:inline-block; font-size:.78rem; margin-top:1.6rem; padding:.5rem 0; text-decoration:underline; text-underline-offset:3px; }
 .utility-link:hover { color:var(--plaster); }
-@media (max-width:700px) { .hero-actions { align-items:stretch; flex-direction:column; } .hero-actions .cta,.cta-secondary { justify-content:center; text-align:center; width:100%; } .site-header { padding-block:.9rem; } }
+@media (max-width:700px) { .hero-actions { align-items:stretch; flex-direction:column; } .hero-actions .cta,.cta-secondary,.cta-secondary-filled { justify-content:center; text-align:center; width:100%; } .site-header { padding-block:.9rem; } }
+
+/* Điểm 1 — Thông điệp chính: subline nêu rõ danh mục sản phẩm cốt lõi */
+.hero-subline { color:var(--plaster); font-size:clamp(1.05rem,1.7vw,1.35rem); font-weight:600; letter-spacing:.01em; margin:0 0 .85rem; max-width:55ch; }
+
+/* Điểm 2 — Bằng chứng / Proof: badge giải thưởng định lượng gần CTA */
+.proof-badges { display:flex; flex-direction:column; gap:.45rem; list-style:none; margin:1.4rem 0 0; padding:0; }
+.proof-badges li { background:rgba(230,157,69,.12); border-left:2px solid var(--gold); color:var(--plaster); font-size:.82rem; line-height:1.45; padding:.5rem .85rem; }
+
+/* Điểm 3 — CTA giảm lo ngại: CTA phụ dẫn thẳng tới trang mua hàng online */
+.cta-secondary-filled { background:transparent; border:1px solid var(--gold); color:var(--gold); display:inline-flex; font-size:1.02rem; font-weight:700; margin-top:0; padding:1rem 1.75rem; text-decoration:none; transition:background .2s ease,color .2s ease; }
+.cta-secondary-filled:hover { background:var(--gold); color:var(--charcoal); }
