@@ -15,9 +15,13 @@ test('the landing page is clearly academic and has a valid UTM CTA', () => {
   assert.match(home, /Bài tập học thuật – không phải trang chính thức của thương hiệu/);
   assert.match(home, /id="visit-roastery"/);
   assert.match(home, /data-track="cta_click"/);
-  assert.match(home, /https:\/\/www\.everyhalf\.vn\/store\?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=academic_demo_2026/);
-  assert.match(home, />Tìm cửa hàng gần bạn</);
-  assert.match(home, /href="\/tracking">Xem kết quả ghi nhận sự kiện</);
+  assert.match(home, /https:\/\/www\.everyhalf\.vn\/store\?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=ec204_every_half/);
+  assert.match(home, /https:\/\/www\.everyhalf\.vn\/product\?utm_source=every_half_study/);
+  assert.match(home, />Tìm\s+cửa hàng gần bạn</);
+  assert.match(home, />Mua\s+cà phê hạt đặc sản</);
+  assert.match(home, /Gold 2025/);
+  assert.match(home, /Gold 2026/);
+  assert.doesNotMatch(home, /Overall National Winner|Southeast Asia Green Coffee/);
   assert.doesNotMatch(home, /[←-⇿☀-➿\u{1F000}-\u{1FFFF}]/u);
 });
 
