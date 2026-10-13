@@ -36,3 +36,5 @@
 /* Điểm 3 — CTA giảm lo ngại: CTA phụ dẫn thẳng tới trang mua hàng online */
 .cta-secondary-filled { background:transparent; border:1px solid var(--gold); color:var(--gold); display:inline-flex; font-size:1.02rem; font-weight:700; margin-top:0; padding:1rem 1.75rem; text-decoration:none; transition:background .2s ease,color .2s ease; }
 .cta-secondary-filled:hover { background:var(--gold); color:var(--charcoal); }
+.closing-cta { font-size:1.05rem; margin-top:1.75rem; padding:1.1rem 2rem; }
+@media (max-width:700px) { .closing-cta { justify-content:center; text-align:center; width:100%; } }

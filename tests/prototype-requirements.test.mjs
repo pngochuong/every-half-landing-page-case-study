@@ -15,7 +15,8 @@ test('the landing page is clearly academic and has a valid UTM CTA', () => {
   assert.match(home, /Bài tập học thuật – không phải trang chính thức của thương hiệu/);
   assert.match(home, /id="visit-roastery"/);
   assert.match(home, /data-track="cta_click"/);
-  assert.match(home, /https:\/\/www\.everyhalf\.vn\/store\?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=ec204_every_half/);
+  assert.match(home, /https:\/\/www\.google\.com\/maps\/search\/every\+half\+coffee\+roasters\//);
+  assert.match(home, /click_cta_maps/);
   assert.match(home, /https:\/\/www\.everyhalf\.vn\/product\?utm_source=every_half_study/);
   assert.match(home, />Tìm\s+cửa hàng gần bạn</);
   assert.match(home, />Mua\s+cà phê hạt đặc sản</);

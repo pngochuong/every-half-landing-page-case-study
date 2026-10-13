@@ -48,9 +48,6 @@
           </ul>
         </div>
         <div class="hero-actions">
-          <a id="visit-roastery" class="cta" data-track="cta_click"
-            href="https://www.everyhalf.vn/store?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=ec204_every_half&amp;utm_content=find_store_location">Tìm
-            cửa hàng gần bạn</a>
           <a id="buy-specialty" class="cta-secondary-filled" data-track="cta_click"
             href="https://www.everyhalf.vn/product?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=ec204_every_half&amp;utm_content=buy_specialty_coffee">Mua
             cà phê hạt đặc sản</a>
@@ -104,6 +101,8 @@
         <p class="eyebrow">Ghé thăm Every Half</p>
         <h2 id="closing-title">Lần ghé tiếp theo bắt đầu từ đây.</h2>
         <p>Chọn một góc yên tĩnh, một tách cà phê hợp gu và dành cho mình một nhịp chậm giữa ngày.</p>
+        <a id="visit-roastery" class="cta closing-cta" data-track="cta_click" target="_blank" rel="noopener noreferrer"
+          href="https://www.google.com/maps/search/every+half+coffee+roasters/">Tìm cửa hàng gần bạn</a>
       </div>
     </section>
 
@@ -111,6 +110,19 @@
   <footer class="site-footer"><span>Bài tập học thuật – không phải trang chính thức của thương hiệu</span>
     <a href="asset_gallery.html">Xem asset gallery</a>
   </footer>
+  <script>
+    document.getElementById('visit-roastery')?.addEventListener('click', function () {
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'click_cta_maps', {
+            cta_location: 'final_section',
+            cta_text: 'Tìm cửa hàng gần bạn',
+            destination: 'google_maps'
+          });
+        }
+      } catch (e) { /* analytics must never block navigation */ }
+    });
+  </script>
 </body>
 
 </html>
