@@ -33,29 +33,75 @@
         alt="Cảnh cà phê và thiên nhiên Tây Nguyên trong ánh sáng trầm ấm">
       <div class="hero-light" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow">EVERY HALF — COFFEE &amp; COMMUNITY</p>
+        <p class="eyebrow">EVERY HALF — COFFEE & COMMUNITY</p>
         <h1 id="hero-title">Tìm một khoảng dừng<br>cho riêng bạn.</h1>
         <p class="hero-subline">Cà phê hạt đặc sản Việt Nam — từ vùng nguyên liệu chọn lọc đến tách cà phê của bạn.</p>
-        <p>Khám phá những không gian Every Half, thưởng thức cà phê theo cách của bạn và tìm cửa hàng phù hợp cho lần
-          ghé tiếp theo.</p>
+        <p class="hero-support">Khám phá các dòng cà phê hạt đặc sản của Every Half, tìm hiểu hương vị và lựa chọn phù
+          hợp với cách thưởng thức của bạn.</p>
         <div class="hero-proof">
           <p class="proof-label">Được công nhận tại Global Coffee Awards</p>
           <ul class="proof-badges">
-            <li><span class="proof-medal">Gold 2025</span><strong>Fine Robusta Cư M’gar</strong><span>Filter / Robusta · Global
-                Coffee Awards Origin</span></li>
-            <li><span class="proof-medal">Gold 2026</span><strong>Liberica M’Drak</strong><span>Filter / Liberica · Global
-                Coffee Awards Asia</span></li>
+            <li><span class="proof-medal">Gold 2025</span><strong>Fine Robusta Cư M’gar</strong><span
+                class="proof-meta">Filter / Robusta · Global Coffee Awards Origin</span>
+              <a class="proof-source"
+                href="https://perfectdailygrind.com/2025/10/global-coffee-awards-roasters-origin-category-winners/"
+                target="_blank" rel="noopener noreferrer">Xem nguồn</a>
+            </li>
+            <li><span class="proof-medal">Gold 2026</span><strong>Liberica M’Drak</strong><span
+                class="proof-meta">Filter / Liberica · Global Coffee Awards Asia</span>
+              <a class="proof-source"
+                href="https://perfectdailygrind.com/2026/07/global-coffee-awards-best-roasters-asia/" target="_blank"
+                rel="noopener noreferrer">Xem nguồn</a>
+            </li>
           </ul>
         </div>
         <div class="hero-actions">
-          <a id="buy-specialty" class="cta-secondary-filled" data-track="cta_click"
-            href="https://www.everyhalf.vn/product?utm_source=every_half_study&amp;utm_medium=landing_cta&amp;utm_campaign=ec204_every_half&amp;utm_content=buy_specialty_coffee">Mua
-            cà phê hạt đặc sản</a>
+          <div class="cta-group">
+            <a id="buy-specialty" class="cta-secondary-filled" data-track="cta_click"
+              aria-describedby="buy-specialty-note" href="https://www.everyhalf.vn/product">Mua
+              cà phê hạt đặc sản</a>
+            <p class="cta-note" id="buy-specialty-note">Xem các dòng cà phê và thông tin mua hàng trên website Every
+              Half</p>
+          </div>
           <a class="cta-secondary" href="#origin">Khám phá câu chuyện Every Half</a>
         </div>
         <!-- <a class="utility-link" href="/tracking">Xem kết quả ghi nhận sự kiện</a> -->
       </div>
     </section>
+
+    <section class="section products" id="products" aria-labelledby="products-title" data-reveal>
+      <p class="eyebrow">Cà phê hạt đặc sản</p>
+      <h2 id="products-title">Khám phá cà phê hạt đặc sản</h2>
+      <p class="products-intro">Hai dòng cà phê hạt đặc sản của Every Half từng được vinh danh. Chọn dòng bạn quan tâm
+        để
+        xem thông tin chi tiết và mua hàng trên website Every Half.</p>
+      <ul class="product-grid">
+        <li class="product-card">
+          <h3>Fine Robusta Cư M’gar</h3>
+          <ul class="product-traits">
+            <li>Hạng mục: Filter / Robusta</li>
+            <li>Gold – Global Coffee Awards Origin 2025</li>
+          </ul>
+          <p class="product-price"><span class="product-price-label">Giá niêm yết</span><strong>200.000 VNĐ</strong></p>
+          <a class="product-link" data-track="cta_click"
+            href="https://www.everyhalf.vn/en/crafted-in-vietnam/fine-robusta-cu-m-gar">Xem
+            chi tiết</a>
+        </li>
+        <li class="product-card">
+          <h3>Liberica M’Drak</h3>
+          <ul class="product-traits">
+            <li>Hạng mục: Filter / Liberica</li>
+            <li>Gold – Global Coffee Awards Asia 2026</li>
+          </ul>
+          <p class="product-price"><span class="product-price-label">Giá niêm yết</span><strong>250.000 VNĐ</strong></p>
+          <a class="product-link" data-track="cta_click"
+            href="https://www.everyhalf.vn/en/crafted-in-vietnam/cpg-liberica-m-drak-200gr">Xem
+            chi tiết</a>
+        </li>
+      </ul>
+      <p class="product-note">Giá niêm yết theo website Every Half, có thể thay đổi theo thời điểm.</p>
+    </section>
+
     <section class="section story-grid" id="origin" aria-labelledby="origin-title" data-reveal>
       <div class="story-copy">
         <p class="eyebrow">01 / Nguồn gốc</p>
@@ -83,10 +129,14 @@
       <div class="space-copy">
         <p class="eyebrow">03 / Không gian</p>
         <h2 id="space-title">Một nơi để nhịp sống chậm lại.</h2>
+        <!-- LP02: nội dung về không gian/cửa hàng được chuyển từ Hero xuống đây -->
+        <p>Khám phá những không gian Every Half, thưởng thức cà phê theo cách của bạn và tìm cửa hàng phù hợp cho lần
+          ghé
+          tiếp theo.</p>
       </div>
     </section>
     <section class="section organic" aria-labelledby="organic-title" data-reveal>
-      <p class="eyebrow">Nông hộ &amp; tự nhiên</p>
+      <p class="eyebrow">Nông hộ & tự nhiên</p>
       <h2 id="organic-title">Điều nhỏ bé vẫn tiếp tục lớn lên.</h2><img class="organic-float cherries"
         src="public/images/everyhalf/organic/14_organic_02.png" alt="Chùm quả cà phê ở nhiều độ chín khác nhau"><img
         class="organic-float leaf" src="public/images/everyhalf/organic/14_organic_01.png" alt="Lá cà phê"><img
@@ -101,8 +151,15 @@
         <p class="eyebrow">Ghé thăm Every Half</p>
         <h2 id="closing-title">Lần ghé tiếp theo bắt đầu từ đây.</h2>
         <p>Chọn một góc yên tĩnh, một tách cà phê hợp gu và dành cho mình một nhịp chậm giữa ngày.</p>
-        <a id="visit-roastery" class="cta closing-cta" data-track="cta_click" target="_blank" rel="noopener noreferrer"
-          href="https://www.google.com/maps/search/every+half+coffee+roasters/">Tìm cửa hàng gần bạn</a>
+        <!-- LP05: CTA mua làm Primary, tìm cửa hàng làm Secondary (giữ id visit-roastery để không mất event click_cta_maps) -->
+        <div class="closing-actions">
+          <a id="buy-specialty-closing" class="cta closing-cta" data-track="cta_click"
+            href="https://www.everyhalf.vn/product">Mua
+            cà phê hạt đặc sản</a>
+          <a id="visit-roastery" class="cta-secondary" data-track="cta_click" target="_blank" rel="noopener noreferrer"
+            href="https://www.google.com/maps/search/every+half+coffee+roasters/">Tìm cửa hàng
+            gần bạn</a>
+        </div>
       </div>
     </section>
 
